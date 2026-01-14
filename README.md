@@ -1,6 +1,3 @@
-
-
-````md
 # GigFlow – Mini Freelance Marketplace Platform
 
 🚀 **GigFlow** is a full-stack mini freelance marketplace where **Clients** can post jobs (Gigs) and **Freelancers** can apply by submitting bids.  
@@ -165,19 +162,3 @@ npm run dev
 
 A 2-minute Loom video demonstrating the **Hiring Flow** has been recorded and shared.
 
----
-
-````
-
----
-
-
-
----
-
-
-
----
-
-
-````
