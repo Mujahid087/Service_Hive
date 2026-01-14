@@ -18,15 +18,24 @@ const app = express();
 /* =======================
    MIDDLEWARE
 ======================= */
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://service-hive-five.vercel.app"
+];
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: "http://localhost:5173", // frontend URL
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 
 /* =======================
    ROUTES
